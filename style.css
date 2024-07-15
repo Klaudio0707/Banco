@@ -1,3 +1,5 @@
+.ocultar{display: none;}
+.exibir{display:block;}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
