@@ -1,29 +1,62 @@
-const buttonSubmit = document.querySelector("#buttonDeposito");
+const btnDepositar = document.querySelector("#btnDeposita");
+const inDeposito = Number(document.querySelector("#inDeposito").value);
+
+const artigoInicio = document.querySelector(".inicio");
 const artigoDeposito = document.querySelector(".Deposito");
 const artigoTransferencia = document.querySelector(".Transferencia");
 const artigoFormulario = document.querySelector(".Formulario");
+
+const frmDeposito = document.querySelector("#frmDeposito");
+
+const saldo = document.querySelector(".Saldo");
+const inSaldo = document.querySelector("#inSaldo");
 /*
 const buttonSaque = document.querySelector("#buttonSaque");
 const buttonSaldo = document.querySelector("#buttonSaldo");
 */
-function ocult(){
-artigoDeposito.className="ocultar";
-artigoTransferencia.className="ocultar";
-// artigoFormulario.className="ocultar";
 
-}
+let value = 0;
+
+
+
+
+function voltar(){
+artigoInicio.className="exibir"
 ocult();
-buttonSubmit.addEventListener("click", function(event) {
-event.preventDefault();
-let nome = document.getElementById("nomeInput");
-let sobreNome = document.getElementById("sobrenomeInput");
-let deposito = (document.getElementById("depositoInput").value);
+};
 
-document.querySelector("nome").innerHTML = `Nome: ${nome}`;
-document.querySelector(".sobreNomeInput").innerHTML = `SobreNome ${sobreNome}`;
-document.querySelector(".depositoBancario").innerHTML = `Valor Depositado R$ ${deposito}`;
-console.log(nome,sobreNome,deposito);
+ocult();
 
+function cadastro(){
+    artigoFormulario.className="exibir";   
+    artigoInicio.className="ocultar"; 
+};
+
+
+
+artigoFormulario.addEventListener("submit", (e) => {
+e.preventDefault();
+
+artigoFormulario.className="ocultar";
+artigoDeposito.className="exibir";
+saldo.className="exibir";
+
+});
+btnDepositar.addEventListener("click", () => {
+
+const deposito = parseFloat(frmDeposito.inDeposito.value);
+
+value += deposito;
+
+frmDeposito.reset();
+frmDeposito.inDeposito.focus();
+inSaldo.innerText = value.toFixed(2);
 
 
 });
+function ocult(){
+    artigoDeposito.className="ocultar";
+    artigoTransferencia.className="ocultar";
+    artigoFormulario.className="ocultar";
+    saldo.className="ocultar";
+};
