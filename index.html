@@ -31,15 +31,15 @@
 </article>
 
 
-<article class="Formulario">
+<article class="Cadastro">
   <fieldset>
 <legend>Cria Sua Conta já!</legend>
-  <form id="Cadastro">
+  <form id="frmCadastro">
   <label>Nome Completo:
   <input type="text" id="inNome" placeholder="Nome Completo">    
   </label><br>
   <label>Data de Nascimento:
-  <input type="datetime" placeholder="Data de Nascimento">   
+  <input type="date" placeholder="Data de Nascimento">   
   </label><br>
   <label>Endereço
   <input type="text" id="inRua" placeholder="Rua e Complemento">
@@ -47,7 +47,7 @@
 <input type="text" id="inEstado" placeholder="Estado">
   </label><br>
   <input type="submit"> 
-  <input type="button" value="Voltar" id="btnVoltar" >
+  <input type="button" value="Inicio" id="btnVoltar" onclick="voltar()" >
  
   </form>
   </fieldset>
@@ -61,7 +61,7 @@
     <input type="number" id="inDeposito" >
     </label><br>
     <input type="button" id="btnDeposita" value="Depositar">  
-    <input type="button" value="Voltar" id="btnVoltar" >
+    <input type="button" value="Inicio" id="btnVoltar" onclick="voltar()" >
             
   </form>
     </fieldset>
@@ -78,7 +78,7 @@
     <input type="number" placeholder="Valor R$" id="inTransferir">    
 </label><br>
 <input type="submit" value="Transferir">
-<input type="button" value="Voltar" id="btnVoltar" >
+<input type="button" value="Inicio" id="btnVoltar" onclick="voltar()" >
 </form>
 </fieldset>
 </article>

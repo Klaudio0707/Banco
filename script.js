@@ -4,9 +4,11 @@ const inDeposito = Number(document.querySelector("#inDeposito").value);
 const artigoInicio = document.querySelector(".inicio");
 const artigoDeposito = document.querySelector(".Deposito");
 const artigoTransferencia = document.querySelector(".Transferencia");
-const artigoFormulario = document.querySelector(".Formulario");
+const artigoFormulario = document.querySelector(".Cadastro");
 
 const frmDeposito = document.querySelector("#frmDeposito");
+const frmTransferencia = document.querySelector("#frmTransferencia");
+const frmCadastro = document.querySelector("#frmCadastro");
 
 const saldo = document.querySelector(".Saldo");
 const inSaldo = document.querySelector("#inSaldo");
@@ -19,8 +21,8 @@ let value = 0;
 
 
 
-
 function voltar(){
+  
 artigoInicio.className="exibir"
 ocult();
 };
@@ -30,6 +32,8 @@ ocult();
 function cadastro(){
     artigoFormulario.className="exibir";   
     artigoInicio.className="ocultar"; 
+ frmCadastro.reset();
+
 };
 
 
